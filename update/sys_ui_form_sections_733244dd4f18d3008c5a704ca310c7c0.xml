@@ -29,6 +29,20 @@
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2018-02-14 06:02:55</sys_updated_on>
         </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-14 06:05:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b4e24cdd4f18d3008c5a704ca310c736</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_194306_needit_needit" name="x_194306_needit_needit" sys_domain="global" view="Default view">733244dd4f18d3008c5a704ca310c7c0</sys_ui_form>
+            <sys_ui_section caption="Statisctics" display_value="Statisctics" name="x_194306_needit_needit" sys_domain="global" view="Default view">f8e24cdd4f18d3008c5a704ca310c733</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-14 06:05:43</sys_updated_on>
+        </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_194306_needit_needit</name>
             <roles/>
