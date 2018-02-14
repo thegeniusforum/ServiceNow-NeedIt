@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_rest_message">
+    <sys_rest_message action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <authentication_type>basic</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile display_value="Hardik Basic Auth Profile1">13e283fc4f5c93008c5a704ca310c753</basic_auth_profile>
+        <basic_auth_user/>
+        <description/>
+        <name>HardikPublicAPISet1</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint>https://postman-echo.com/post/</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-13 04:41:54</sys_created_on>
+        <sys_id>95e5627c4f1c93008c5a704ca310c707</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>HardikPublicAPISet1</sys_name>
+        <sys_package display_value="NeedIt" source="x_194306_needit">9469dee44fd093008c5a704ca310c781</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">9469dee44fd093008c5a704ca310c781</sys_scope>
+        <sys_update_name>sys_rest_message_95e5627c4f1c93008c5a704ca310c707</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-14 05:12:44</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+</record_update>

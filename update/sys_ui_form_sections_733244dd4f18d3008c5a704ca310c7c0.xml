@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_form_sections form_id="733244dd4f18d3008c5a704ca310c7c0" sys_domain="global" table="x_194306_needit_needit" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-14 06:02:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ff3284dd4f18d3008c5a704ca310c7ec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_194306_needit_needit" name="x_194306_needit_needit" sys_domain="global" view="Default view">733244dd4f18d3008c5a704ca310c7c0</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_194306_needit_needit" sys_domain="global" view="Default view">bd53f22c4fd093008c5a704ca310c759</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-14 06:02:55</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-14 06:02:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fb3284dd4f18d3008c5a704ca310c7ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_194306_needit_needit" name="x_194306_needit_needit" sys_domain="global" view="Default view">733244dd4f18d3008c5a704ca310c7c0</sys_ui_form>
+            <sys_ui_section caption="Log" display_value="Log" name="x_194306_needit_needit" sys_domain="global" view="Default view">333244dd4f18d3008c5a704ca310c7bf</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-14 06:02:55</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_194306_needit_needit</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-14 06:02:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>733244dd4f18d3008c5a704ca310c7c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_194306_needit_needit</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="NeedIt" source="x_194306_needit">9469dee44fd093008c5a704ca310c781</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NeedIt">9469dee44fd093008c5a704ca310c781</sys_scope>
+            <sys_update_name>sys_ui_form_sections_733244dd4f18d3008c5a704ca310c7c0</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-14 06:02:55</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
