@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Only display What needed choices that match the Request type value.</description>
+        <field>u_request_type</field>
+        <global>true</global>
+        <messages/>
+        <name> NeedIt Request Type Options</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    var whatNeeded = "u_choice_1";
+    var whatNeededControl = g_form.getControl(whatNeeded);
+    var whatNeededOldOptions = whatNeeded.options;
+    var whatNeededValue = g_form.getValue(whatNeeded);
+
+    if (newValue === '') {
+        return;
+    }
+    else {
+        g_form.clearOptions(whatNeeded);
+        var apiResponseEntry = { url: "", name: "" };
+        //getApiSingleEntry();
+        switch (newValue) {
+            case "human resources":
+                g_form.addOption(whatNeeded, "hr1", "Human Resource 1");
+                g_form.addOption(whatNeeded, "hr2", "Human Resource 2");
+                g_form.addOption(whatNeeded, apiResponseEntry.url, apiResponseEntry.name);
+                break;
+
+            case "facilities":
+                g_form.addOption(whatNeeded, "facilities1", "Facilities 1");
+                g_form.addOption(whatNeeded, "facilities2", "Facilities 2");
+                g_form.addOption(whatNeeded, apiResponseEntry.url, apiResponseEntry.name);
+                break;
+
+            case "legal":
+                g_form.addOption(whatNeeded, "legal1", "Legal 1");
+                g_form.addOption(whatNeeded, "legal2", "Legal 2");
+                g_form.addOption(whatNeeded, apiResponseEntry.url, apiResponseEntry.name);
+                break;
+
+            case "your_choice":
+                g_form.addOption(whatNeeded, "your_choice1", "Your Department Choice 1");
+                g_form.addOption(whatNeeded, "your_choice2", "Your Department Choice 2");
+                g_form.addOption(whatNeeded, apiResponseEntry.url, apiResponseEntry.name);
+                break;
+        }
+    }
+    if (isLoading && !g_form.isNewRecord()) {
+        g_form.setValue('u_choice_1', whatNeededValue);
+    }
+}
+
+function getApiSingleEntry() {
+    try {
+        var r = new sn_ws.RESTMessageV2('x_194306_needit.HardikPublicAPISet1', 'Http Post With Application/JSON Header');
+
+        //override authentication profile 
+        authentication_type = 'basic';
+        r.setAuthentication(authentication_type, "HardikAuthProfile1");
+
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+    }
+    catch (ex) {
+        alert("Error: " + ex.message);
+    }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-14 08:20:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9f7e90114f98d3008c5a704ca310c7b8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name> NeedIt Request Type Options</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_194306_needit">9469dee44fd093008c5a704ca310c781</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">9469dee44fd093008c5a704ca310c781</sys_scope>
+        <sys_update_name>sys_script_client_9f7e90114f98d3008c5a704ca310c7b8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-15 08:16:47</sys_updated_on>
+        <table>x_194306_needit_needit</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_request_type</field>
+        <global>true</global>
+        <messages/>
+        <name>NeedIt onChange Script</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    jslog(control.value + " -- " + oldValue + " -- " + newValue + " -- " + isLoading + " -- " + isTemplate);
+    if (control === "u_request_type") {
+        switch (newValue) {
+            case "human resources":
+                jslog("You selectected HR");
+                break;
+
+            case "facilities":
+                jslog("You selectected Facilities");
+                break;
+
+            case "legal":
+                jslog("You selectected Legal");
+                break;
+
+            case "your_choice":
+                jslog("You selectected Your Department Choice");
+                break;
+        }
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-14 06:57:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8dcd88114f58d3008c5a704ca310c7bc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>NeedIt onChange Script</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_194306_needit">9469dee44fd093008c5a704ca310c781</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">9469dee44fd093008c5a704ca310c781</sys_scope>
+        <sys_update_name>sys_script_client_8dcd88114f58d3008c5a704ca310c7bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-15 09:14:31</sys_updated_on>
+        <table>x_194306_needit_needit</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
