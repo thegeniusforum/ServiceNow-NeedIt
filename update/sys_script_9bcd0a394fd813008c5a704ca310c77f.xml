@@ -52,7 +52,7 @@ var rightNow = new GlideDateTime();
 		current.setAbortAction(true);
 	}	
 	else if(needItUtils.isPastDate(whenNeeded)){
-		 gs.addErrorMessage("When Needed date cannot be in the past. Your request has not been saved to the database." + rightNow + " -- " +whenNeeded);
+		 gs.addErrorMessage("When Needed date cannot be in the past. Your request has not been saved to the database.");
 		current.setAbortAction(true);
 	}
 	
@@ -63,7 +63,7 @@ var rightNow = new GlideDateTime();
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9bcd0a394fd813008c5a704ca310c77f</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>NeedIt When needed field date</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_194306_needit">9469dee44fd093008c5a704ca310c781</sys_package>
@@ -71,7 +71,7 @@ var rightNow = new GlideDateTime();
         <sys_scope display_value="NeedIt">9469dee44fd093008c5a704ca310c781</sys_scope>
         <sys_update_name>sys_script_9bcd0a394fd813008c5a704ca310c77f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-02-19 10:02:12</sys_updated_on>
+        <sys_updated_on>2018-02-19 10:32:32</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
