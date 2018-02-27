@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Find Overdue NeedIt Tasks</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-02-26 10:13:43</run_start>
+        <run_time>1970-01-01 16:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var rightNow = new GlideDateTime();
+var overdueNITasks = new GlideRecord("x_194306_needit_needit_task");
+
+overdueNITasks.addQuery('due_date', "<=", rightNow);
+overdueNITasks.addQuery("state", "!=", 3);
+overdueNITasks.query();
+
+while(overdueNITasks.next()){
+	gs.info("Overdue NeedIt Task Record = " + overdueNITasks.number);
+	gs.eventQueue("x_194306_needit.overdueNeedItTask", overdueNITasks, overdueNITasks.number, gs.getUserName(), "needit_queue");
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-26 10:24:31</sys_created_on>
+        <sys_id>3ebeae894fa013008c5a704ca310c762</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Find Overdue NeedIt Tasks</sys_name>
+        <sys_package display_value="NeedIt" source="x_194306_needit">9469dee44fd093008c5a704ca310c781</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">9469dee44fd093008c5a704ca310c781</sys_scope>
+        <sys_update_name>sysauto_script_3ebeae894fa013008c5a704ca310c762</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-27 06:36:16</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
