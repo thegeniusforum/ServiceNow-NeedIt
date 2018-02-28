@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>CountDueSoonNeedItTask</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+
+          var rightNow = new GlideTime();
+	
+	var duesoonNeedItTasks = new GlideRecord("x_194306_needit_needit_task");
+	duesoonNeedItTasks.addQuery("due_date", ">=", rightNow);
+	duesoonNeedItTasks.addQuery("due_date", "<=", gs.hoursAgo(-24));
+	duesoonNeedItTasks.addQuery("state", "<", 3);
+	duesoonNeedItTasks.addQuery("assigned_to", current.assigned_to);
+	duesoonNeedItTasks.query();
+	
+	var duesoonNeedItTaskCount = overdueNeedItTasks.getRowCount() - 1;
+	
+	if(duesoonNeedItTaskCount > 0)
+		template.print("In addition to this Due Soon NeedIt task, you have " + duesoonNeedItTaskCount + " more overdue Tasks.");
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-28 07:11:45</sys_created_on>
+        <sys_id>98afc0fd4fe453008c5a704ca310c75b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CountDueSoonNeedItTask</sys_name>
+        <sys_package display_value="NeedIt" source="x_194306_needit">9469dee44fd093008c5a704ca310c781</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">9469dee44fd093008c5a704ca310c781</sys_scope>
+        <sys_update_name>sys_script_email_98afc0fd4fe453008c5a704ca310c75b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-28 07:11:45</sys_updated_on>
+    </sys_script_email>
+</record_update>
